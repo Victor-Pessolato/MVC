@@ -11,7 +11,7 @@ class actores_model {
     }
 
     public function get_actores() {
-        $consulta = $this->db->query("select * from actors");
+        $consulta = $this->db->query("select * from actor");
         while ($filas = $consulta->fetchAll()) {
             $this->actores[] = $filas;
         }

@@ -6,7 +6,7 @@ class Conectar {
         $server = "localhost";
         $user = "root";
         $password = "";
-        $db = "sakilla";
+        $db = "sakila";
 
         try {
             $conn = new PDO("mysql:host=$server;dbname=$db", $user, $password, [PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"]);
