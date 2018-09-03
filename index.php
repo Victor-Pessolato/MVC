@@ -11,7 +11,8 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        // put your code here
+        require_once("db/db.php");
+        require_once("controllers/personas_controller.php");
         ?>
     </body>
 </html>
