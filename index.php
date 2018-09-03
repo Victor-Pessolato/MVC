@@ -12,6 +12,15 @@ if ($controller === "actores") {
         $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
         Actores::view($id);
     }
+} else if ($controller === "films") {
+    require_once 'controllers/films_controller.php';
+    if ($action === "index") {
+        Films::index();
+    }
+    if ($action === "view") {
+        $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
+        Films::view($id);
+    }
 } else {
     require_once 'views/home.php';
 }

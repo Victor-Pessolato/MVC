@@ -11,7 +11,7 @@
             //. $dato["actor_id"] . "'>Detalle</a> " . "<br/>";
             echo $dato["title"] . " " . $dato["description"] . " ";
             ?>
-            <a href="index.php?controller=actores&action=view&id=<?= $dato["film_id"] ?>">Detalle</a> <br/>
+            <a href="index.php?controller=films&action=view&id=<?= $dato["film_id"] ?>">Detalle</a> <br/>
             <?php
         }
         ?>

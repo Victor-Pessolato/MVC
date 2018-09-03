@@ -4,7 +4,7 @@
 require_once("db/db.php");
 require_once("models/films_model.php");
 
-class Actores {
+class Films {
 
     public static function index() {
         $per = new films_model();
