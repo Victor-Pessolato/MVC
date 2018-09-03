@@ -7,7 +7,12 @@
     <body>
         <?php
         foreach ($datos as $dato) {
-            echo $dato["first_name"] . "<br/>";
+            //echo $dato["first_name"] . " " . $dato["last_name"] . " <a href='index.php?controller=actores&action=view&id="
+            //. $dato["actor_id"] . "'>Detalle</a> " . "<br/>";
+            echo $dato["first_name"] . " " . $dato["last_name"] . " ";
+            ?>
+            <a href="index.php?controller=actores&action=view&id=<?= $dato["actor_id"] ?>">Detalle</a> <br/>
+            <?php
         }
         ?>
     </body>
