@@ -12,7 +12,7 @@ and open the template in the editor.
     <body>
         <?php
         require_once("db/db.php");
-        require_once("constrollers/actores_controller.php");
+        require_once("controllers/actores_controller.php");
         ?>
     </body>
 </html>
