@@ -13,6 +13,9 @@ and open the template in the editor.
         <?php
         require_once("db/db.php");
         require_once("controllers/personas_controller.php");
+
+        $a = new actores_model();
+        print_r($a->get_actores());
         ?>
     </body>
 </html>
