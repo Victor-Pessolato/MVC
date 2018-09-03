@@ -13,4 +13,11 @@ class Actores {
         require_once("views/actores_view.php");
     }
 
+    public static function view($id) {
+        $per = new actores_model();
+        $dato = $per->get_actor($id);
+        //Llamada a la vista
+        require_once("views/actor_view.php");
+    }
+
 }

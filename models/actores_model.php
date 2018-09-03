@@ -16,4 +16,10 @@ class actores_model {
         return $this->actores;
     }
 
+    public function get_actor($ID) {
+        $consulta = $this->db->query("select * from actor where actor_id = $ID");
+        $this->actores = $consulta->fetch();
+        return $this->actores;
+    }
+
 }
