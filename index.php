@@ -3,24 +3,10 @@
 $controller = filter_input(INPUT_GET, "controller", FILTER_SANITIZE_STRING);
 $action = filter_input(INPUT_GET, "action", FILTER_SANITIZE_STRING);
 
-if ($controller === "actores") {
-    require_once 'controllers/actores_controller.php';
-    if ($action === "index") {
-        Actores::index();
-    }
-    if ($action === "view") {
-        $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-        Actores::view($id);
-    }
-} else if ($controller === "films") {
-    require_once 'controllers/films_controller.php';
-    if ($action === "index") {
-        Films::index();
-    }
-    if ($action === "view") {
-        $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_NUMBER_INT);
-        Films::view($id);
-    }
+if (!empty($controller) && !empty($action)) {
+    require_once "controllers/" . $controller . "_controller.php";
+    $c = ucfirst($controller);
+    $c::$action();
 } else {
     require_once 'views/home.php';
 }

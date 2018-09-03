@@ -13,7 +13,8 @@ class Films {
         require_once("views/films_view.php");
     }
 
-    public static function view($id) {
+    public static function view() {
+        $id = filter_input(INPUT_GET, "id");
         $per = new films_model();
         $dato = $per->get_film($id);
         //Llamada a la vista
